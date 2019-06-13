@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PMML xmlns="http://www.dmg.org/PMML-4_3" version="4.4">
+    <Header copyright="Copyright (c) 2018 Software AG" description="PMML from LGBM Training API">
+        <Application name="Nyoka" version="3.0.10rc1"/>
+        <Timestamp>2019-06-11 10:04:21.882424</Timestamp>
+    </Header>
+    <DataDictionary/>
+    <MiningModel modelName="LightGBModel" functionName="regression">
+        <MiningSchema>
+            <MiningField name="SepalLengthCm" usageType="active" lowValue="4.3" highValue="7.9"/>
+            <MiningField name="SepalWidthCm" usageType="active" lowValue="2.0" highValue="4.4"/>
+            <MiningField name="PetalLengthCm" usageType="active" lowValue="1.1" highValue="6.9"/>
+            <MiningField name="PetalWidthCm" usageType="active" lowValue="0.1" highValue="2.5"/>
+        </MiningSchema>
+        <Output/>
+        <Segmentation missingThreshold="1">
+            <Segment id="1" weight="1">
+                <TreeModel modelName="DecisionTreeModel" functionName="regression" missingValuePenalty="1.0">
+                    <MiningSchema>
+                        <MiningField name="SepalLengthCm" usageType="active" lowValue="4.3" highValue="7.9"/>
+                        <MiningField name="SepalWidthCm" usageType="active" lowValue="2.0" highValue="4.4"/>
+                        <MiningField name="PetalLengthCm" usageType="active" lowValue="1.1" highValue="6.9"/>
+                        <MiningField name="PetalWidthCm" usageType="active" lowValue="0.1" highValue="2.5"/>
+                    </MiningSchema>
+                    <Node id="0" score="0" recordCount="84">
+                        <Node id="0" score="0.581907584316511" recordCount="29">
+                            <SimplePredicate field="PetalLengthCm" operator="lessOrEqual" value="2.3500000000000005"/>
+                        </Node>
+                        <Node id="1" score="0.8102630163140337" recordCount="55">
+                            <SimplePredicate field="PetalLengthCm" operator="greaterThan" value="2.3500000000000005"/>
+                        </Node>
+                        <Extension name="gain" value="86.720703125"/>
+                    </Node>
+                    <Extension name="shrinkage" value="1"/>
+                </TreeModel>
+            </Segment>
+        </Segmentation>
+    </MiningModel>
+</PMML>

@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PMML xmlns="http://www.dmg.org/PMML-4_3" version="4.4">
+    <Header copyright="Copyright (c) 2018 Software AG" description="PMML from LGBM Training API">
+        <Application name="Nyoka" version="3.0.4"/>
+        <Timestamp>2019-06-13 05:24:27.443300</Timestamp>
+    </Header>
+    <DataDictionary/>
+    <MiningModel modelName="LightGBModel" functionName="regression">
+        <MiningSchema>
+            <MiningField name="Column_0" usageType="active"/>
+            <MiningField name="Column_1" usageType="active"/>
+            <MiningField name="Column_2" usageType="active"/>
+            <MiningField name="Column_3" usageType="active"/>
+            <MiningField name="Column_4" usageType="active"/>
+            <MiningField name="Column_5" usageType="active"/>
+            <MiningField name="Column_6" usageType="active"/>
+            <MiningField name="Column_7" usageType="active"/>
+            <MiningField name="Column_8" usageType="active"/>
+            <MiningField name="Column_9" usageType="active"/>
+        </MiningSchema>
+        <Output/>
+        <Segmentation missingThreshold="1">
+            <Segment id="1" weight="1">
+                <TreeModel modelName="DecisionTreeModel" functionName="regression" missingValuePenalty="1.0">
+                    <MiningSchema>
+                        <MiningField name="Column_0" usageType="active"/>
+                        <MiningField name="Column_1" usageType="active"/>
+                        <MiningField name="Column_2" usageType="active"/>
+                        <MiningField name="Column_3" usageType="active"/>
+                        <MiningField name="Column_4" usageType="active"/>
+                        <MiningField name="Column_5" usageType="active"/>
+                        <MiningField name="Column_6" usageType="active"/>
+                        <MiningField name="Column_7" usageType="active"/>
+                        <MiningField name="Column_8" usageType="active"/>
+                        <MiningField name="Column_9" usageType="active"/>
+                    </MiningSchema>
+                    <Node id="0" score="0" recordCount="623">
+                        <Node id="1" score="1.53668" recordCount="215">
+                            <SimplePredicate field="Column_2" operator="lessOrEqual" value="1.0000000180025095e-35"/>
+                            <Node id="15" score="2.29834" recordCount="122">
+                                <SimplePredicate field="Column_0" operator="lessOrEqual" value="2.5000000000000004"/>
+                                <Node id="16" score="2.07914" recordCount="51">
+                                    <SimplePredicate field="Column_7" operator="lessOrEqual" value="28.856250000000003"/>
+                                    <Node id="0" score="-0.27296091280993884" recordCount="22">
+                                        <SimplePredicate field="Column_6" operator="lessOrEqual" value="160.50000000000003"/>
+                                    </Node>
+                                    <Node id="17" score="-0.22545500974297675" recordCount="29">
+                                        <SimplePredicate field="Column_6" operator="greaterThan" value="160.50000000000003"/>
+                                    </Node>
+                                    <Extension name="gain" value="0.6706719994544983"/>
+                                </Node>
+                                <Node id="17" score="2.4558" recordCount="71">
+                                    <SimplePredicate field="Column_7" operator="greaterThan" value="28.856250000000003"/>
+                                    <Node id="16" score="-0.23851913308639144" recordCount="20">
+                                        <SimplePredicate field="Column_1" operator="lessOrEqual" value="174.50000000000003"/>
+                                    </Node>
+                                    <Node id="18" score="-0.19642362453538886" recordCount="51">
+                                        <SimplePredicate field="Column_1" operator="greaterThan" value="174.50000000000003"/>
+                                    </Node>
+                                    <Extension name="gain" value="0.6047520041465759"/>
+                                </Node>
+                                <Extension name="gain" value="1.0003199577331543"/>
+                            </Node>
+                            <Node id="3" score="0.537501" recordCount="93">
+                                <SimplePredicate field="Column_0" operator="greaterThan" value="2.5000000000000004"/>
+                                <Node id="2" score="-0.298818104794584" recordCount="37">
+                                    <SimplePredicate field="Column_9" operator="lessOrEqual" value="1.5000000000000002"/>
+                                </Node>
+                                <Node id="5" score="-0.13176" recordCount="56">
+                                    <SimplePredicate field="Column_9" operator="greaterThan" value="1.5000000000000002"/>
+                                    <Node id="4" score="-0.40690116729040104" recordCount="34">
+                                        <SimplePredicate field="Column_7" operator="lessOrEqual" value="21.037500000000005"/>
+                                    </Node>
+                                    <Node id="6" score="-0.5599757438395008" recordCount="22">
+                                        <SimplePredicate field="Column_7" operator="greaterThan" value="21.037500000000005"/>
+                                    </Node>
+                                    <Extension name="gain" value="7.435050010681152"/>
+                                </Node>
+                                <Extension name="gain" value="14.97700023651123"/>
+                            </Node>
+                            <Extension name="gain" value="38.869598388671875"/>
+                        </Node>
+                        <Node id="2" score="-0.809768" recordCount="408">
+                            <SimplePredicate field="Column_2" operator="greaterThan" value="1.0000000180025095e-35"/>
+                            <Node id="1" score="-0.38512762838471015" recordCount="29">
+                                <SimplePredicate field="Column_3" operator="lessOrEqual" value="15.500000000000002"/>
+                            </Node>
+                            <Node id="4" score="-0.924323" recordCount="379">
+                                <SimplePredicate field="Column_3" operator="greaterThan" value="15.500000000000002"/>
+                                <Node id="6" score="-0.198971" recordCount="85">
+                                    <SimplePredicate field="Column_0" operator="lessOrEqual" value="1.5000000000000002"/>
+                                    <Node id="9" score="0.301223" recordCount="50">
+                                        <SimplePredicate field="Column_1" operator="lessOrEqual" value="477.50000000000006"/>
+                                        <Node id="3" score="-0.4670376080775474" recordCount="28">
+                                            <SimplePredicate field="Column_8" operator="lessOrEqual" value="59.50000000000001"/>
+                                        </Node>
+                                        <Node id="10" score="-0.3686325231531261" recordCount="22">
+                                            <SimplePredicate field="Column_8" operator="greaterThan" value="59.50000000000001"/>
+                                        </Node>
+                                        <Extension name="gain" value="2.8340699672698975"/>
+                                    </Node>
+                                    <Node id="7" score="-0.5452149811008377" recordCount="35">
+                                        <SimplePredicate field="Column_1" operator="greaterThan" value="477.50000000000006"/>
+                                    </Node>
+                                    <Extension name="gain" value="7.217080116271973"/>
+                                </Node>
+                                <Node id="7" score="-1.13403" recordCount="294">
+                                    <SimplePredicate field="Column_0" operator="greaterThan" value="1.5000000000000002"/>
+                                    <Node id="8" score="-1.21422" recordCount="270">
+                                        <SimplePredicate field="Column_6" operator="lessOrEqual" value="642.5000000000001"/>
+                                        <Node id="10" score="-0.807062" recordCount="61">
+                                            <SimplePredicate field="Column_6" operator="lessOrEqual" value="216.50000000000003"/>
+                                            <Node id="5" score="-0.5692695574156962" recordCount="35">
+                                                <SimplePredicate field="Column_0" operator="lessOrEqual" value="2.5000000000000004"/>
+                                            </Node>
+                                            <Node id="11" score="-0.48785406835002115" recordCount="26">
+                                                <SimplePredicate field="Column_0" operator="greaterThan" value="2.5000000000000004"/>
+                                            </Node>
+                                            <Extension name="gain" value="2.3490400314331055"/>
+                                        </Node>
+                                        <Node id="11" score="-1.33305" recordCount="209">
+                                            <SimplePredicate field="Column_6" operator="greaterThan" value="216.50000000000003"/>
+                                            <Node id="12" score="-1.22247" recordCount="153">
+                                                <SimplePredicate field="Column_3" operator="lessOrEqual" value="32.25000000000001"/>
+                                                <Node id="18" score="-1.51824" recordCount="72">
+                                                    <SimplePredicate field="Column_3" operator="lessOrEqual" value="26.500000000000004"/>
+                                                    <Node id="9" score="-0.577287749520649" recordCount="21">
+                                                        <SimplePredicate field="Column_7" operator="lessOrEqual" value="7.797900000000001"/>
+                                                    </Node>
+                                                    <Node id="20" score="-1.63517" recordCount="51">
+                                                        <SimplePredicate field="Column_7" operator="greaterThan" value="7.797900000000001"/>
+                                                        <Node id="19" score="-0.6173787100454133" recordCount="27">
+                                                            <SimplePredicate field="Column_1" operator="lessOrEqual" value="362.50000000000006"/>
+                                                        </Node>
+                                                        <Node id="21" score="-0.6173787100454133" recordCount="24">
+                                                            <SimplePredicate field="Column_1" operator="greaterThan" value="362.50000000000006"/>
+                                                        </Node>
+                                                        <Extension name="gain" value="7.105429898699844e-15"/>
+                                                    </Node>
+                                                    <Extension name="gain" value="0.5679550170898438"/>
+                                                </Node>
+                                                <Node id="13" score="-0.959564" recordCount="81">
+                                                    <SimplePredicate field="Column_3" operator="greaterThan" value="26.500000000000004"/>
+                                                    <Node id="14" score="-0.632897" recordCount="42">
+                                                        <SimplePredicate field="Column_6" operator="lessOrEqual" value="445.50000000000006"/>
+                                                        <Node id="13" score="-0.48343845556495096" recordCount="22">
+                                                            <SimplePredicate field="Column_1" operator="lessOrEqual" value="541.5000000000001"/>
+                                                        </Node>
+                                                        <Node id="15" score="-0.5542354472189096" recordCount="20">
+                                                            <SimplePredicate field="Column_1" operator="greaterThan" value="541.5000000000001"/>
+                                                        </Node>
+                                                        <Extension name="gain" value="1.247380018234253"/>
+                                                    </Node>
+                                                    <Node id="14" score="-0.5849975496215652" recordCount="39">
+                                                        <SimplePredicate field="Column_6" operator="greaterThan" value="445.50000000000006"/>
+                                                    </Node>
+                                                    <Extension name="gain" value="2.211280107498169"/>
+                                                </Node>
+                                                <Extension name="gain" value="2.826240062713623"/>
+                                            </Node>
+                                            <Node id="19" score="-1.63517" recordCount="56">
+                                                <SimplePredicate field="Column_3" operator="greaterThan" value="32.25000000000001"/>
+                                                <Node id="12" score="-0.6173787100454133" recordCount="33">
+                                                    <SimplePredicate field="Column_1" operator="lessOrEqual" value="507.50000000000006"/>
+                                                </Node>
+                                                <Node id="20" score="-0.6173787100454133" recordCount="23">
+                                                    <SimplePredicate field="Column_1" operator="greaterThan" value="507.50000000000006"/>
+                                                </Node>
+                                                <Extension name="gain" value="7.105429898699844e-15"/>
+                                            </Node>
+                                            <Extension name="gain" value="1.6586999893188477"/>
+                                        </Node>
+                                        <Extension name="gain" value="3.10332989692688"/>
+                                    </Node>
+                                    <Node id="8" score="-0.4770603482087385" recordCount="24">
+                                        <SimplePredicate field="Column_6" operator="greaterThan" value="642.5000000000001"/>
+                                    </Node>
+                                    <Extension name="gain" value="5.051459789276123"/>
+                                </Node>
+                                <Extension name="gain" value="13.695300102233887"/>
+                            </Node>
+                            <Extension name="gain" value="16.622299194335938"/>
+                        </Node>
+                        <Extension name="gain" value="184.16000366210938"/>
+                    </Node>
+                    <Extension name="shrinkage" value="1"/>
+                </TreeModel>
+            </Segment>
+        </Segmentation>
+    </MiningModel>
+</PMML>
